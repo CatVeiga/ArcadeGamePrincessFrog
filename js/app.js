@@ -1,7 +1,6 @@
 //TODO: create a timer function
 //TODO: create a grab function for it's easier to reach the points
-//TODO: put audio in the background of the music
-//
+//TODO: create a different sound for different stage the game (hit, die, win, grab...)
 
 //──── global variables ──────────────────────────────────────────────────────────────────
 const liveContainer = document.querySelector(".lives");
@@ -10,8 +9,6 @@ const scoreContainer = document.querySelector(".score");
 let score = 0;
 const play = document.getElementById("audio");
 let oldsrc = play.src;
-
-
 
 //========================================================================================
 /*                                                                                      *
