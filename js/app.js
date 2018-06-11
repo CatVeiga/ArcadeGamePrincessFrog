@@ -1,4 +1,4 @@
-//TODO: create a timer function
+//TODO: create a timer function (my timer does not work)
 //TODO: create a grab function for it's easier to reach the points
 //TODO: create a different sound for different stage the game (hit, die, win, grab...)
 
@@ -71,6 +71,9 @@ Enemy.prototype.update = function(dt) {
                 loseGame();
                 //game restart
                 restart();
+                //clear the timer
+                //clearInterval(interval);
+
             }
         }
 };
@@ -92,8 +95,30 @@ function restart() {
     lives = 3;
     // reset the score 
     score = 0;
+    //clear the time
+    //clearInterval(interval);
 }
 
+//========================================================================================
+/*                                                                                      *
+ *                                   function to timer                                  *
+ *                                                                                      */
+//========================================================================================
+/*let timer = document.querySelector("#timer");
+*let seconds = 60;
+*
+function startTime() {
+*    
+*    const interval = setTimeout(function(){
+*        timer.innerHTML = seconds;
+*        seconds--;
+*        if(seconds = 0){
+*           loseGame();
+*            seconds = 60;
+*        }
+*    }, 1000);
+*}
+*/
 //========================================================================================
 /*                                                                                      *
  *                              modal box for over the game                             *
@@ -144,7 +169,7 @@ var Player = function(x, y) {
     this.x = x;
     this.y = y;
     //the image will we use to set the player
-    this.player = 'images/Design.png';
+    this.player = 'images/Design.png';    
 }
 
 //──── update the player Position ────────────────────────────────────────────────────────
