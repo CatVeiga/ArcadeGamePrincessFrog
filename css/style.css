@@ -1,0 +1,125 @@
+body {
+    text-align: center;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Press Start 2P", cursive;
+    background-color: #000;
+    font-size: 13px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 26px;
+    color: #5A7;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+canvas {
+    background-color: #fff;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+/**************************
+* styling the score panel *
+**************************/
+.score-panel {
+    text-align: left;
+    width: 440px;
+    margin-bottom: 10px;
+    border: 2px solid #9ca;
+    padding: 10px;
+    border-radius: 10px;
+    color: #5a7;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.score-panel .hearts_rate {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .timer {
+    float: right;
+}
+
+/****************************
+* styling to the modalboxes *
+****************************/
+.modalBox {
+    width: 45%;
+    display: none;
+    background-color: #5a7;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.content {
+    margin: 10px;
+    padding: 10px;
+    color: #fff;
+}
+
+#btn-inst, 
+#btn-win,
+#btn-over,
+.close {
+    border: none;
+    padding: 10px;
+    border: 3px solid #9ca;
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/************
+*  footer   *
+************/
+.footer {
+    background-color: #5a7;
+    color: #fff;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+.rights {
+    color: #fc0;
+    text-decoration: none;
+}
