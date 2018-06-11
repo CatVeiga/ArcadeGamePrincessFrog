@@ -21,6 +21,7 @@ const close = document.getElementById("close");
 
 btnInst.onclick = function() {
     modalInst.style.display = "block";
+    play.src = "";
 }
 
 close.onclick = function() {
