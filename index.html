@@ -18,25 +18,29 @@
         </header>
 
         <section class="score-panel"><!--Score panel where the user can see the timer, lives and score -->
-            <i class="em em-green_heart"></i>
-        
-           <span class="lives"> </span> lives |
+            <i class="em em-green_heart"></i> x <span class="lives"> </span>  |
 
-            <span class="score">  </span> <i class="em em-frog"></i>  
+           <i class="em em-frog"></i> x <span class="score"> </span> |
         
-            <!--<span id="timer" class="timer"> <i class="em em-alarm_clock"></i> 60(s) </span>--> 
+           <i class="em em-alarm_clock"></i> x <span id="timer" class="timer"> 60 </span>
         </section>
 
         <section><!--instructions modal box-->
             <button id="btn-inst">Instructions</button>
-            <div id="modalinst" class="modalBox">
+            <div id="modalinst" class="modalBoxinst">
                 <div class="content">
                     <h3>Instructions</h3>
                     <p>To move the player around the game, use the game controls, press:</p>
                     <span><img src="images/keys _control.png" alt=""></span>
-                    <p>The goal of this game is never get hit by a car, and you need to make 1600 points
-                        to win reaching the water.
-                    </p>
+                    <ul>
+                        <li>The goal of this game is never get hit by a car;</li>
+                        <li>You need to make 1600 points, by reaching the water;</li>
+                        <li>Try not to waste all your lives;</li>
+                        <li>If you lose the 3 lives, you lose the game;</li>
+                        <li>If you don't make the 1600 points before the time stops, you lose.</li>
+                    </ul>
+                    <p>Atention! As soon as you finished this window, the timer will start, so prepare 
+                    yourself to play</p>
                     <button class="close" id="close">Close</button>
                 </div>
             </div>
