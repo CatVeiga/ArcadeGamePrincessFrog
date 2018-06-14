@@ -1,10 +1,8 @@
-//TODO: create a grab function for it's easier to reach the points
-//TODO: create a different sound for different stage the game (hit, die, win, grab...)
-
-//──── global variables ──────────────────────────────────────────────────────────────────
-//variables for audio
-const play = document.getElementById("audio");
-let oldsrc = play.src;
+//========================================================================================
+/*                                                                                      *
+ *                                     sound effects                                    *
+ *                                                                                      */
+//========================================================================================
 
 //========================================================================================
 /*                                                                                      *
@@ -13,20 +11,12 @@ let oldsrc = play.src;
 //========================================================================================
 const close = document.querySelector("#close");
 const modalInst = document.querySelector("#modalinst");
-const btnInst = document.querySelector("#btn-inst");
 
 
 close.addEventListener("click", function(){
     modalInst.style.display = "none"; 
     startTime(); 
-    oldsrc = play.src;  
 });
-
-btnInst.addEventListener("click", function(){
-    modalInst.style.display = "block";
-    play.src = "";
-});
-
 //========================================================================================
 /*                                                                                      *
  *                              function to init the timer                              *
@@ -37,6 +27,12 @@ const modalOver = document.querySelector("#modalOver");
 const modalWin = document.querySelector("#modalWin");
 let seconds = 0;
 let totalTime = 120;
+
+function newFunction() {
+    const backsound = document.createElement("backsound");
+    backsound.playbackRate = 0.3;
+    backsound.setAttribute('src', 'audio/FroggerMainSongTheme(loop).mp3');
+}
 
 function startTime(){
     timeContainer.innerHTML = totalTime - seconds + `(s)`;
@@ -56,8 +52,6 @@ function startTime(){
             clearInterval(interval);
             seconds = 0;
             firstMove = false;
-            //the audio will stop
-            play.src = "";
         }
 
         //if the user reaches 1600 points 
@@ -71,8 +65,6 @@ function startTime(){
             clearInterval(interval);
             seconds = 0;
             firstMove = false;
-            // the audio will stop
-            play.src = "";
         }
 
         // if the user loses all the lives
@@ -85,12 +77,9 @@ function startTime(){
             clearInterval(interval);
             seconds = 0;
             firstMove = false;
-            //the audio will stop
-            play.src = "";
         }
     }
 }
-
 //========================================================================================
 /*                                                                                      *
  *                               function to init the game                              *
@@ -112,7 +101,6 @@ function initGame() {
 };
 
 initGame();
-
 //========================================================================================
 /*                                                                                      *
  *                                   events listeners                                   *
@@ -180,7 +168,6 @@ function checkCollisions () {
             }
     });
 }
-
 //========================================================================================
 /*                                                                                      *
  *                                    Player Function                                   *
@@ -225,12 +212,10 @@ class Player {
             //increase the score 
             score += 100;
             scoreContainer.innerHTML = score;
-
             }, 100);
         }
     }
 }
-
 //========================================================================================
 /*                                                                                      *
  *                             Iniatilization of our objects                            *
