@@ -18,7 +18,8 @@ Here is the link to view this project live and play the game, please click it be
 ### when you initiate the game for the first time you can see the instructions
 ![Alt text](images/screenshot5.png)
 
-### you can move the player with your keyboards controls, and you need to reach the water (100 points); everytime you hit by a car, you lost a live, and if you didn't reach the 1600 points before the time you lose it too. 
+### you can move the player with your keyboards controls, and you need to reach the water (100 points); 
+### everytime you hit by a car, you lost a live, and if you didn't reach the 1600 points before the time you lose it too. 
 ![Alt text](images/screenshot4.png)
 
 ### when you lose the game, a modal box appears
