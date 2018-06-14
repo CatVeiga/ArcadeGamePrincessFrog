@@ -6,7 +6,6 @@
 const close = document.querySelector("#close");
 const modalInst = document.querySelector("#modalinst");
 
-
 close.addEventListener("click", function(){
     modalInst.style.display = "none"; 
     startTime(); 
@@ -114,7 +113,6 @@ btnWin.addEventListener("click", function(){
     initGame();
     startTime();
 });
-
 //========================================================================================
 /*                                                                                      *
  *                                    Enemys function                                   *
