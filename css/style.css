@@ -92,7 +92,6 @@ canvas {
     width: 34%;
     height: 70%;
     background-color: #5a7;
-    padding: 10px;
     margin: 0 auto;
     text-align: center;
     color: #fff;
@@ -112,6 +111,15 @@ canvas {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    font-family: 'Oxygen Mono', monospace;
+}
+
+.content h3 {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.content ul > li {
+    text-align: justify;
 }
 
 #btn-inst, 
