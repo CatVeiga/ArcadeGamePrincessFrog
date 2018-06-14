@@ -15,8 +15,7 @@ Here is the link to view this project live and play the game, please click it be
 ### In the score-panel you can view the lives you have or lost, the score and the timer 
 ![Alt text](images/screenshot2.png)
 
-### Above the score-panel you have a button where you can click and read the instructions of the game
-![Alt text](images/screenshot3.png)
+### when you initiate the game for the first time you can see the instructions
 ![Alt text](images/screenshot5.png)
 
 ### you can move the player with your keyboards controls, and you need to reach the water (100 points); everytime you hit by a car, you lost a live, and if you didn't reach the 1600 points before the time you lose it too. 
