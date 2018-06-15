@@ -1,4 +1,3 @@
-
 //========================================================================================
 /*                                                                                      *
  *                              modal for the instructions                              *
@@ -29,14 +28,14 @@ function newFunction() {
 }
 
 function startTime(){
-    timeContainer.innerHTML = `${totalTime-seconds}(s)`;
+    timeContainer.innerHTML = totalTime - seconds + `(s)`;
     const interval = setInterval(initTime, 1000);
 
     function initTime() {
         seconds++;
-        timeContainer.innerHTML = `${totalTime-seconds}(s)`;
+        timeContainer.innerHTML = totalTime - seconds + `(s)`;
         //if the seconds was equal to totalTime
-        if(seconds === totalTime) {
+        if(seconds == totalTime) {
             //player will reset the position
             player.x = 202;
             player.y = 405;
@@ -177,8 +176,7 @@ class Player {
     }
     //──── update the player Position ────────────────────────────────────────────────────────
     update(dt) {
-        this.x = 202;
-        this.y = 405;
+        this.render();
     }
     //──── draw the player in the screen ─────────────────────────────────────────────────────
     render() {
@@ -199,10 +197,10 @@ class Player {
             this.x += 102;
         }
         if (this.y < 0) {
-            setTimeout(()=>{
+            setTimeout(function(){
             //reset the player position
-            this.x = 202;
-            this.y = 405;
+            player.x = 202;
+            player.y = 405;
             //increase the score 
             score += 100;
             scoreContainer.innerHTML = score;
@@ -227,7 +225,7 @@ enemyPosition.forEach(function(positionY) {
 });
 
 //──── put the player object in a variable called player ─────────────────────────────────
-const player = new Player(202, 405);
+let player = new Player(202, 405);
 
 //──── This listens for key presses and sends the keys to your ───────────────────────────
 // Player.handleInput() method. You don't need to modify this.
