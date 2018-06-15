@@ -1,3 +1,4 @@
+"use strict";
 //========================================================================================
 /*                                                                                      *
  *                              modal for the instructions                              *
@@ -28,14 +29,14 @@ function newFunction() {
 }
 
 function startTime(){
-    timeContainer.innerHTML = totalTime - seconds + `(s)`;
+    timeContainer.innerHTML = `${totalTime-seconds}(s)`;
     const interval = setInterval(initTime, 1000);
 
     function initTime() {
         seconds++;
-        timeContainer.innerHTML = totalTime - seconds + `(s)`;
+        timeContainer.innerHTML = `${totalTime-seconds}(s)`;
         //if the seconds was equal to totalTime
-        if(seconds == totalTime) {
+        if(seconds === totalTime) {
             //player will reset the position
             player.x = 202;
             player.y = 405;
@@ -139,7 +140,15 @@ class Enemy {
             this.speed = 100 + Math.floor(Math.random() * 200);
         }
       //when the player colide with the enemys check for collisions
-      checkCollisions();
+      if((player.x < this.x + 80 &&
+        player.x + 55 > this.x) &&
+        (player.y < this.y + 60 &&
+        player.y + 60 > this.y)) {
+                player.x = 202;
+                player.y = 405;
+                lives--;
+                liveContainer.innerHTML = lives;
+        }
     }
     //──── draw the Enemy on the screen ──────────────────────────────────────────────────────
     render() {
@@ -147,19 +156,6 @@ class Enemy {
     }
 }
 
-function checkCollisions () {
-    allEnemies.forEach(function(enemy){
-        if((player.x < enemy.x + 80 &&
-            player.x + 55 > enemy.x) &&
-            (player.y < enemy.y + 60 &&
-            player.y + 60 > enemy.y)) {
-                player.x = 202;
-                player.y = 405;
-                lives--;
-                liveContainer.innerHTML = lives;
-            }
-    });
-}
 //========================================================================================
 /*                                                                                      *
  *                                    Player Function                                   *
@@ -176,7 +172,9 @@ class Player {
     }
     //──── update the player Position ────────────────────────────────────────────────────────
     update(dt) {
-        this.render();
+        liveContainer.innerHTML = lives;
+        scoreContainer.innerHTML = score;
+        timeContainer.innerHTML = `${totalTime-seconds}(s)`;
     }
     //──── draw the player in the screen ─────────────────────────────────────────────────────
     render() {
@@ -197,10 +195,10 @@ class Player {
             this.x += 102;
         }
         if (this.y < 0) {
-            setTimeout(function(){
+            setTimeout(()=>{
             //reset the player position
-            player.x = 202;
-            player.y = 405;
+            this.x = 202;
+            this.y = 405;
             //increase the score 
             score += 100;
             scoreContainer.innerHTML = score;
@@ -220,12 +218,12 @@ var allEnemies = [];
 var enemyPosition = [63, 147, 230];
 
 enemyPosition.forEach(function(positionY) {
-	enemy = new Enemy(0, positionY, 200);
+	let enemy = new Enemy(0, positionY, 200);
 	allEnemies.push(enemy);
 });
 
 //──── put the player object in a variable called player ─────────────────────────────────
-let player = new Player(202, 405);
+const player = new Player(202, 405);
 
 //──── This listens for key presses and sends the keys to your ───────────────────────────
 // Player.handleInput() method. You don't need to modify this.
