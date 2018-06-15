@@ -8,6 +8,15 @@ Here is the link to view this project live and play the game, please click it be
 <a href="https://cveiga819.github.io/ArcadeGamePrincessFrog/">Arcade Game Clone: The Princess Frog</a>
 
 # Instructions
+If you want to download and install the game, and playing locally please follow this steps:
+
+* click on this buttom and choose, clone or download;
+
+![Alt Text](images/screenshot8.png)
+
+`$git clone https://github.com/cveiga819/ArcadeGamePrincessFrog.git`
+
+and open your game, by clicking in the index.html file;
 
 ### The goal of the game, is score 1600 points, by reaching the water, and avoid hiting by a car, here is the layout.
 ![Alt text](images/screenshot1.png)
