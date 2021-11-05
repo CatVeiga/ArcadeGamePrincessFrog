@@ -61,7 +61,7 @@ This code was provided by Udacity, to complete the project in the Front-End Nano
 
 ## Aknowlegments
 
-I learned many things with this project, and for me it's more easier than the memory game, since I decided to complete this project right before I finished the memory game, so I remembered how I do make things work. Although I'm not complete the game, missing a few details. But I want to add those things a soon as possible.
+I learned many things with this project, and for me was easier than the memory game, since I decided to complete this project right before I finished the memory game, so I remembered how I did things work. Although I'm not complete the game, missing a few details. But I want to add those things a soon as possible.
 
 ## License
 
