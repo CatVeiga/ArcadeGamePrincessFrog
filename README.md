@@ -5,7 +5,7 @@ This was the fourth project for the Udacity nanodegree, in Front-End Web Develop
 
 Here is the link to view this project live and play the game, please click it below:
 
-<a href="https://cveiga819.github.io/ArcadeGamePrincessFrog/">Arcade Game Clone: The Princess Frog</a>
+<a href="https://catveiga.github.io/ArcadeGamePrincessFrog/">Arcade Game Clone: The Princess Frog</a>
 
 # Instructions
 If you want to download and install the game, and playing locally please follow this steps:
